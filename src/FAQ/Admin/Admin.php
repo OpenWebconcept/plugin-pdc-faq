@@ -57,7 +57,7 @@ class Admin
         foreach ($services as $service) {
             $service = new $service($this->plugin);
 
-            if ( ! $service instanceof ServiceProvider) {
+            if (! $service instanceof ServiceProvider) {
                 throw new \Exception('Provider must extend ServiceProvider.');
             }
 
@@ -67,5 +67,4 @@ class Admin
             $service->register();
         }
     }
-
 }

@@ -18,8 +18,13 @@ class ElasticSearchServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->plugin->loader->addFilter('owc/pdc-elasticsearch/elasticpress/postargs/meta', $this,
-            'registerElasticSearchMetaData', 10, 2);
+        $this->plugin->loader->addFilter(
+            'owc/pdc-elasticsearch/elasticpress/postargs/meta',
+            $this,
+            'registerElasticSearchMetaData',
+            10,
+            2
+        );
     }
 
     /**
@@ -38,7 +43,7 @@ class ElasticSearchServiceProvider extends ServiceProvider
 
         $metadata = $this->getFaqsForElasticSearch($postId);
 
-        if ( ! empty($metadata)) {
+        if (! empty($metadata)) {
             $additionalPreparedMeta['faq_group'] = $metadata;
         }
 
@@ -68,5 +73,4 @@ class ElasticSearchServiceProvider extends ServiceProvider
 
         return $metadata;
     }
-
 }

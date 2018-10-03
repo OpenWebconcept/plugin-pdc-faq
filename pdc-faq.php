@@ -3,7 +3,7 @@
  * Plugin Name:       PDC FAQ
  * Plugin URI:        https://www.openwebconcept.nl/
  * Description:       Plugin to create the frequently asked questions section for a PDC item.
- * Version:           1.1
+ * Version:           2.0.0
  * Author:            Yard Internet
  * Author URI:        https://www.yardinternet.nl/
  * License:           GPL-3.0
@@ -13,25 +13,24 @@
  */
 
 use OWC\PDC\FAQ\Autoloader;
-use OWC\PDC\FAQ\Foundation\Hooks;
 use OWC\PDC\FAQ\Foundation\Plugin;
 
 /**
  * If this file is called directly, abort.
  */
-if ( ! defined('WPINC')) {
+if (!defined('WPINC')) {
     die;
 }
 
 // Don't boot if base plugin is not active.
-if ( ! is_plugin_active('pdc-base/pdc-base.php')) {
+if (!is_plugin_active('pdc-base/pdc-base.php')) {
     return;
 }
 
 /**
  * manual loaded file: the autoloader.
  */
-require_once __DIR__.'/autoloader.php';
+require_once __DIR__ . '/autoloader.php';
 $autoloader = new Autoloader();
 
 /**
@@ -41,6 +40,6 @@ $autoloader = new Autoloader();
  * plugin overrides. The plugins_loaded action hook fires early, and precedes the setup_theme, after_setup_theme, init
  * and wp_loaded action hooks.
  */
-add_action('plugins_loaded', function() {
+add_action('plugins_loaded', function () {
     $plugin = (new Plugin(__DIR__))->boot();
-}, 9);
+}, 10);

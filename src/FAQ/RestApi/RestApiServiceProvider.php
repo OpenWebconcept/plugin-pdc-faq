@@ -21,5 +21,4 @@ class RestApiServiceProvider extends ServiceProvider
     {
         Item::addGlobalField('faq', new FAQField($this->plugin));
     }
-
 }
