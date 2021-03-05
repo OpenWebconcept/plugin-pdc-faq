@@ -39,8 +39,27 @@ class FAQField extends CreatesFields
      */
     private function getFAQ(WP_Post $post)
     {
-        return array_filter(get_post_meta($post->ID, '_owc_pdc_faq_group', true) ?: [], function ($faq) {
+        $faqs = array_filter(get_post_meta($post->ID, '_owc_pdc_faq_group', true) ?: [], function ($faq) {
             return ! empty($faq['pdc_faq_question']) && ! empty($faq['pdc_faq_answer']);
+        });
+
+        $faqs = $this->filterScheduledFaqs($faqs);
+
+        return $faqs;
+    }
+
+    private function filterScheduledFaqs(array $faqs): array
+    {
+        return array_filter($faqs, function ($faq) {
+            if (empty($faq['pdc_faq_scheduled'])) {
+                return true;
+            }
+
+            if ($faq['pdc_faq_scheduled'] !== '1') {
+                return true;
+            }
+
+            return false;
         });
     }
 }

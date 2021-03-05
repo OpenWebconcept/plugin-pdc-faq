@@ -26,6 +26,8 @@ class PdcItem
     {
         $faqs = get_post_meta($object['id'], self::faq_group_meta_key, true);
 
+        $faqs = $this->filterFaqOnAvailability($faqs);
+
         return $faqs;
     }
 
@@ -47,5 +49,12 @@ class PdcItem
         }
 
         return $metadata;
+    }
+
+    private function filterFaqOnAvailability(array $faq): array
+    {
+        $faq = $faq;
+
+        return [];
     }
 }
