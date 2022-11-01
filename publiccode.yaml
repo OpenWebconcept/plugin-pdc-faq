@@ -1,0 +1,21 @@
+name: "plugin-pdc-faq"
+
+publiccodeYmlVersion: 1.0
+url: "https://github.com/OpenWebconcept/plugin-pdc-faq"
+
+platforms:
+  - "web"
+
+categories:
+  - "application-development"
+
+softwareType: "softwareAddon"
+
+description:
+  localisedName: "plugin-pdc-faq"
+  shortDescription: "Deze plugin zorgt voor de veel gestelde vragen binnen een PDC-item"
+  longDescription: "Deze plugin zorgt voor de veel gestelde vragen binnen een PDC-item"
+
+nl:
+  commonground:
+    layerType: "service"
