@@ -27,14 +27,78 @@ msgid "Add new faq"
 msgstr ""
 
 #: config/metaboxes.php:24
-msgid "Question"
+msgid "Usage"
 msgstr ""
 
 #: config/metaboxes.php:29
-msgid "Answer"
+msgid "Website"
 msgstr ""
 
 #: config/metaboxes.php:30
+msgid "SDG"
+msgstr ""
+
+#: config/metaboxes.php:36
+msgid "Connect with SDG FAQ"
+msgstr ""
+
+#: config/metaboxes.php:37
+msgid "When a selection has been made the answer of this question will be send to the SDG input facility. The next field contains the default text written by the SDG."
+msgstr ""
+
+#: config/metaboxes.php:40
+msgid "No connection"
+msgstr ""
+
+#: config/metaboxes.php:41
+#: config/metaboxes.php:52
+msgid "Procedure description"
+msgstr ""
+
+#: config/metaboxes.php:42
+#: config/metaboxes.php:64
+msgid "Proof"
+msgstr ""
+
+#: config/metaboxes.php:43
+msgid "Requirements"
+msgstr ""
+
+#: config/metaboxes.php:44
+msgid "Object and Appeal"
+msgstr ""
+
+#: config/metaboxes.php:45
+msgid "Payment methods"
+msgstr ""
+
+#: config/metaboxes.php:46
+msgid "Deadline"
+msgstr ""
+
+#: config/metaboxes.php:47
+msgid "Action when to reaction"
+msgstr ""
+
+#: config/metaboxes.php:52
+#: config/metaboxes.php:64
+#: config/metaboxes.php:76
+#: config/metaboxes.php:88
+#: config/metaboxes.php:100
+#: config/metaboxes.php:112
+#: config/metaboxes.php:124
+msgid "Default SDG text"
+msgstr ""
+
+#: config/metaboxes.php:137
+msgid "Question"
+msgstr ""
+
+#: config/metaboxes.php:142
+msgid "Answer"
+msgstr ""
+
+#: config/metaboxes.php:143
 msgid "Use of HTML is allowed"
 msgstr ""
 

@@ -31,14 +31,78 @@ msgid "Add new faq"
 msgstr "Voeg nieuwe veelgestelde vraag toe"
 
 #: config/metaboxes.php:24
+msgid "Usage"
+msgstr "Gebruik"
+
+#: config/metaboxes.php:29
+msgid "Website"
+msgstr "Website"
+
+#: config/metaboxes.php:30
+msgid "SDG"
+msgstr "SDG"
+
+#: config/metaboxes.php:36
+msgid "Connect with SDG FAQ"
+msgstr "Verbind met SDG FAQ"
+
+#: config/metaboxes.php:37
+msgid "When a selection has been made the answer of this question will be send to the SDG input facility. The next field contains the default text written by the SDG."
+msgstr "Wanneer er een keuze is gemaakt wordt het antwoord van deze vraag verstuurd naar de SDG invoervoorziening. Het volgende veld bevat de standaard tekst geschreven door de SDG."
+
+#: config/metaboxes.php:40
+msgid "No connection"
+msgstr "Geen verbinding"
+
+#: config/metaboxes.php:41
+#: config/metaboxes.php:52
+msgid "Procedure description"
+msgstr "Procedure beschrijving"
+
+#: config/metaboxes.php:42
+#: config/metaboxes.php:64
+msgid "Proof"
+msgstr "Bewijs"
+
+#: config/metaboxes.php:43
+msgid "Requirements"
+msgstr "Vereisten"
+
+#: config/metaboxes.php:44
+msgid "Object and Appeal"
+msgstr "Bezwaar en in beroep"
+
+#: config/metaboxes.php:45
+msgid "Payment methods"
+msgstr "Betaalmethoden"
+
+#: config/metaboxes.php:46
+msgid "Deadline"
+msgstr "Deadline"
+
+#: config/metaboxes.php:47
+msgid "Action when to reaction"
+msgstr "Actie bij geen reactie"
+
+#: config/metaboxes.php:52
+#: config/metaboxes.php:64
+#: config/metaboxes.php:76
+#: config/metaboxes.php:88
+#: config/metaboxes.php:100
+#: config/metaboxes.php:112
+#: config/metaboxes.php:124
+msgid "Default SDG text"
+msgstr "Standaard SDG tekst"
+
+#: config/metaboxes.php:137
 msgid "Question"
 msgstr "Vraag"
 
-#: config/metaboxes.php:29
+#: config/metaboxes.php:142
 msgid "Answer"
 msgstr "Antwoord"
 
-#: config/metaboxes.php:30
+#: config/metaboxes.php:143
 msgid "Use of HTML is allowed"
 msgstr "Gebruik van HTML is toegestaan"
 

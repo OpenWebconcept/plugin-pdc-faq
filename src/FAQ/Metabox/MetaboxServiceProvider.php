@@ -15,7 +15,6 @@ use OWC\PDC\Base\Foundation\ServiceProvider;
  */
 class MetaboxServiceProvider extends ServiceProvider
 {
-
     /**
      * Register metaboxes for faq.
      */
@@ -32,6 +31,28 @@ class MetaboxServiceProvider extends ServiceProvider
     public function registerMetaboxes(Plugin $basePlugin)
     {
         $configMetaboxes = $this->plugin->config->get('metaboxes');
+
+        if (! $this->plugin->settings->useEnrichment()) {
+            $configMetaboxes = $this->removeInputFacilityMetaboxes($configMetaboxes);
+        }
+
         $basePlugin->config->set('metaboxes.faq', $configMetaboxes['faq']);
+    }
+
+    protected function removeInputFacilityMetaboxes(array $configMetaboxes): array
+    {
+        $metaboxesToRemove = [
+            'pdc_faq_connect_sdq_faq',
+            'pdc_faq_usage'
+        ];
+
+        $groupFields = $configMetaboxes['faq']['fields']['faqs']['group']['fields'];
+        $groupFields = array_filter($groupFields, function ($field) use ($metaboxesToRemove) {
+            return ! in_array($field['id'], $metaboxesToRemove);
+        });
+
+        $configMetaboxes['faq']['fields']['faqs']['group']['fields'] = array_values($groupFields);
+
+        return $configMetaboxes;
     }
 }

@@ -22,6 +22,19 @@ Via the plugin object the following config settings can be adjusted
 - metaboxes
 - rest_api_fields
 
+### SDG ###
+
+This plugin integrates the single digital gateway (SDG). More information can be found on: https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/europa/single-digitale-gateway/
+PDC-FAQ questions can be send to the SDG input facility, for this to achieve there is a possibility to connect PDC-FAQ questions with the FAQ questions from the SDG.
+Existing PDC-FAQ questions which are connected to a FAQ question from the SDG will be used and will overwrite the FAQ question from the SDG. 
+After a push to the SDG or a pull by the SDG these overwrites will be part of the new product version in the SDG, based on the current PDC-item.
+
+PLEASE TAKE NOTICE
+Before using the SDG you must run a simple terminal command 'wp owc-set-default-metabox-values-sdg'. 
+When the enrichment module is enabled it comes with a 'Usage' metabox field. 
+Existing posts without this meta field should have a default value, otherwise the FAQ group is excluded from the API.
+Default value 'website' will be set if there a no values set.
+
 
 ### Translations ###
 
