@@ -55,8 +55,8 @@ return [
                             'options' => [
                                 'textarea_rows' => 4,
                                 'quicktags' => false,
-                                'teeny' => true,
                                 'media_buttons' => false,
+                                'editor_css' => '<style>iframe { pointer-events: none; } .mce-top-part { display: none; }</style>'
                             ],
                             'hidden' => [ 'pdc_faq_connect_sdq_faq', '!=', 'enrichment_procedure_desc' ]
                         ],
@@ -67,8 +67,8 @@ return [
                             'options' => [
                                 'textarea_rows' => 4,
                                 'quicktags' => false,
-                                'teeny' => true,
                                 'media_buttons' => false,
+                                'editor_css' => '<style>iframe { pointer-events: none; } .mce-top-part { display: none; }</style>'
                             ],
                             'hidden' => [ 'pdc_faq_connect_sdq_faq', '!=', 'enrichment_proof' ]
                         ],
@@ -79,8 +79,8 @@ return [
                             'options' => [
                                 'textarea_rows' => 4,
                                 'quicktags' => false,
-                                'teeny' => true,
                                 'media_buttons' => false,
+                                'editor_css' => '<style>iframe { pointer-events: none; } .mce-top-part { display: none; }</style>'
                             ],
                             'hidden' => [ 'pdc_faq_connect_sdq_faq', '!=', 'enrichment_requirements' ]
                         ],
@@ -91,8 +91,8 @@ return [
                             'options' => [
                                 'textarea_rows' => 4,
                                 'quicktags' => false,
-                                'teeny' => true,
                                 'media_buttons' => false,
+                                'editor_css' => '<style>iframe { pointer-events: none; } .mce-top-part { display: none; }</style>'
                             ],
                             'hidden' => [ 'pdc_faq_connect_sdq_faq', '!=', 'enrichment_object_and_appeal' ]
                         ],
@@ -103,8 +103,8 @@ return [
                             'options' => [
                                 'textarea_rows' => 4,
                                 'quicktags' => false,
-                                'teeny' => true,
                                 'media_buttons' => false,
+                                'editor_css' => '<style>iframe { pointer-events: none; } .mce-top-part { display: none; }</style>'
                             ],
                             'hidden' => [ 'pdc_faq_connect_sdq_faq', '!=', 'enrichment_payment_methods' ]
                         ],
@@ -115,8 +115,8 @@ return [
                             'options' => [
                                 'textarea_rows' => 4,
                                 'quicktags' => false,
-                                'teeny' => true,
                                 'media_buttons' => false,
+                                'editor_css' => '<style>iframe { pointer-events: none; } .mce-top-part { display: none; }</style>'
                             ],
                             'hidden' => [ 'pdc_faq_connect_sdq_faq', '!=', 'enrichment_deadline' ]
                         ],
@@ -127,8 +127,8 @@ return [
                             'options' => [
                                 'textarea_rows' => 4,
                                 'quicktags' => false,
-                                'teeny' => true,
                                 'media_buttons' => false,
+                                'editor_css' => '<style>iframe { pointer-events: none; } .mce-top-part { display: none; }</style>'
                             ],
                             'hidden' => [ 'pdc_faq_connect_sdq_faq', '!=', 'enrichment_action_when_no_reaction' ]
                         ],
