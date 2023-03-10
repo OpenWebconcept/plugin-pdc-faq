@@ -13,7 +13,6 @@ use OWC\PDC\Base\Foundation\Plugin as BasePlugin;
  */
 class Plugin extends BasePlugin
 {
-
     /**
      * Name of the plugin.
      *
@@ -27,5 +26,5 @@ class Plugin extends BasePlugin
      *
      * @const string VERSION
      */
-    const VERSION = '3.0.4';
+    const VERSION = '3.0.5';
 }
