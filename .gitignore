@@ -35,6 +35,7 @@
 
 # track this file .gitignore (i.e. do NOT ignore it)
 !.gitignore
+!.github/
 
 # Eslint
 !.eslintrc
@@ -91,6 +92,7 @@ bower_components
 *.map
 
 vendor
+releases
 !/src/vendor
 
 tests/coverage
