@@ -27,7 +27,7 @@ class Plugin extends BasePlugin
      *
      * @const string VERSION
      */
-    const VERSION = '3.1.0';
+    const VERSION = '3.1.1';
 
     protected function checkForUpdate()
     {
