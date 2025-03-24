@@ -34,11 +34,13 @@ if (!is_plugin_active('pdc-base/pdc-base.php')) {
 /**
  * Manual loaded file: the autoloader.
  */
-if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-    require_once __DIR__ . '/vendor/autoload.php';
-} else {
-    require_once __DIR__ . '/autoloader.php';
-    $autoloader = new Autoloader();
+if (!class_exists(\OWC\PDC\FAQ\Foundation\Plugin::class)) {
+    if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+        require_once __DIR__ . '/vendor/autoload.php';
+    } else {
+        require_once __DIR__ . '/autoloader.php';
+        $autoloader = new Autoloader();
+    }
 }
 
 /**
@@ -52,9 +54,9 @@ add_action('plugins_loaded', function () {
     if (! class_exists('OWC\PDC\Base\Foundation\Plugin')) {
         add_action('admin_notices', function () {
             $list = '<p>' . __(
-                'The following plugins are required to use the PDC FAQ:',
-                'pdc-faq'
-            ) . '</p><ol><li>OpenPDC Base (version >= 3.0.0)</li></ol>';
+                    'The following plugins are required to use the PDC FAQ:',
+                    'pdc-faq'
+                ) . '</p><ol><li>OpenPDC Base (version >= 3.0.0)</li></ol>';
 
             printf('<div class="notice notice-error"><p>%s</p></div>', $list);
         });
@@ -64,9 +66,9 @@ add_action('plugins_loaded', function () {
         return;
     }
 
-	add_action('after_setup_theme', function () {
-    	(new Plugin(__DIR__))->boot();
-	});
+    add_action('after_setup_theme', function () {
+        (new Plugin(__DIR__))->boot();
+    });
 }, 10);
 
 
