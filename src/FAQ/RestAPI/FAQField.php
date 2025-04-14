@@ -28,9 +28,19 @@ class FAQField extends CreatesFields
      */
     private function getFAQ(WP_Post $post): array
     {
-        return array_filter(\get_post_meta($post->ID, '_owc_pdc_faq_group', true) ?: [], function ($faq) {
-            return ! empty($faq['pdc_faq_question']) && ! empty($faq['pdc_faq_answer']);
-        });
+		$faq = array_filter(\get_post_meta($post->ID, '_owc_pdc_faq_group', true) ?: [], function ($faq) {
+			return ! empty($faq['pdc_faq_question']) && ! empty($faq['pdc_faq_answer']);
+		});
+
+		/**
+		 * Filter faq fields
+		 *
+		 * @param array $faq
+		 * @param WP_Post $post
+		 *
+		 * @return array
+		 */
+		return apply_filters('owc/pdc-faq/rest-api/faq/fields', $faq, $post);
     }
 
     /**
